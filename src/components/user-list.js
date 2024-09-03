@@ -59,6 +59,12 @@ export class UserList extends LitElement {
           ></vaadin-grid-column>
         </vaadin-grid>
       </div>
+      <div class="t-margin-t1 t-text-align-c">
+        <vaadin-button 
+          @click="${() => this.dispatchEvent(new CustomEvent('changeView', {detail : 0}))}">
+          Ir a inicio
+        </vaadin-button>
+      </div>
 
       <vaadin-dialog id="dlg" ${dialogRenderer(this._dlgRender)}>
       </vaadin-dialog>
